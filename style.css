@@ -1,0 +1,275 @@
+* {  
+  box-sizing: border-box;  
+}  
+
+body, section, header, div, p, h1, h2, h3, ul, li, figure, figcaption {  
+  margin: 0;  
+  padding: 0;  
+}  
+
+body {  
+  font-family: 'Open Sans', sans-serif;  
+  background-color: #F0F4F8;  
+  font-weight: 300;  
+}  
+
+/* Header Section */  
+header {  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  background-color: #f3f3f3; /* Light background for header */  
+  color: white;  
+  z-index: 1000;  
+  padding: 10px 0;  
+}  
+
+h1 {  
+  font-family: 'Pacifico', cursive;  
+  font-size: 35px;  
+  color: #e47174; /* Color for logo text */  
+}  
+
+.Moto {  
+  font-family: 'Monotype Corsiva', cursive;  
+  font-size: 30px;  
+  margin-top: 60px; /* Push content below navbar */  
+  text-align: center;  
+  color: #333; /* Color for motto text */  
+}  
+
+/* Top Bar */  
+.top-bar {  
+  background-color: #f09cba;  
+  padding: 10px;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  color: white;  
+}  
+
+.contact-info span {  
+  margin-right: 20px;  
+}  
+
+.social-icons a {  
+  margin-left: 15px;  
+  color: white;  
+  text-decoration: none;  
+}  
+
+/* Navigation Bar */  
+nav ul {  
+  list-style: none;  
+  display: flex;  
+  justify-content: center;  
+  padding: 0;  
+  margin: 10px 0;  
+}  
+
+nav ul li {  
+  margin: 0 15px;  
+}  
+
+nav ul li a {  
+  text-decoration: none;  
+  color: #333; /* Navigation link color */  
+  font-size: 18px;  
+}  
+
+nav ul li a:hover {  
+  color: #ff6347; /* Hover color for links */  
+  text-decoration: underline;  
+}  
+
+.header-container {  
+  text-align: center;  
+  padding: 20px 0;  
+}  
+
+/* Logo and Brand Name */  
+.logo-brand {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+}  
+
+.logo {  
+  width: 50px; /* Adjust logo size */  
+  margin-right: 15px;  
+}  
+
+/* Background Image */  
+.backgroundimg {  
+  background-image: url('./images/Breakfast.jpeg');  
+  background-size: contain; /* Change this to contain */  
+  background-position: center;  
+  background-repeat: no-repeat; /* Prevent tiling */  
+  width: 100%;  
+  height: 100vh; /* Ensure it takes up the full viewport height */  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  text-align: center;  
+  color: white;  
+  position: relative;  
+}  
+
+.backgroundimg::before {  
+  content: "";  
+  position: absolute;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */  
+  z-index: -1;  
+}  
+
+/* Card Group */  
+.card-group {  
+  margin: 40px auto; /* Space around the group */  
+  gap: 20px; /* Space between cards */  
+  display: flex;  
+  flex-wrap: wrap; /* Wrap cards on smaller screens */  
+  justify-content: center; /* Center the group */  
+  padding: 20px;  
+}  
+
+/* Individual Card */  
+.card {  
+  flex: 1 1 300px; /* Responsive width and height */  
+  max-width: 300px; /* Limit card width */  
+  margin: 10px; /* Space around each card */  
+  border: 1px solid #ddd; /* Subtle border */  
+  border-radius: 8px; /* Rounded corners */  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */  
+  overflow: hidden;  
+  background-color: white;  
+  text-align: center;  
+}  
+
+.card-img-top {  
+  max-height: 200px; /* Restrict image height */  
+  object-fit: cover; /* Keep image aspect ratio */  
+  border-bottom: 1px solid #ddd;  
+}  
+
+.card-body {  
+  padding: 15px;  
+}  
+
+.card-title {  
+  font-size: 18px;  
+  margin-bottom: 10px;  
+}  
+
+.card-text {  
+  font-size: 14px;  
+  color: #555;  
+}  
+
+/* Footer */  
+footer {  
+  background-color: #333;  
+  color: white;  
+  text-align: center;  
+  padding: 15px 0;  
+  position: fixed;  
+  bottom: 0;  
+  width: 100%;  
+}  
+
+/* Media Queries */  
+@media (max-width: 768px) {  
+  nav ul li {  
+    margin: 0 10px;  
+  }  
+  h1 {  
+    font-size: 28px;  
+  }  
+  .Moto {  
+    font-size: 20px;  
+  }  
+  .backgroundimg {  
+    height: 600px;  
+  }  
+  .card-group {  
+    padding: 10px;  
+  }  
+}  
+
+/* Container for scrolling and buttons */  
+.image-scroll-container {  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  position: relative;  
+  padding: 20px;  
+}  
+
+.scroll-btn {  
+  background-color: #333;  
+  color: white;  
+  border: none;  
+  padding: 10px;  
+  font-size: 24px;  
+  cursor: pointer;  
+  border-radius: 50%;  
+  position: absolute;  
+  z-index: 10;  
+  top: 50%;  
+  transform: translateY(-50%);  
+}  
+
+.scroll-btn.left {  
+  left: 0;  
+}  
+
+.scroll-btn.right {  
+  right: 0;  
+}  
+
+/* Scrollable Section */  
+.image-scroll {  
+  display: flex;  
+  gap: 15px;  
+  overflow-x: auto;  
+  scroll-snap-type: x mandatory;  
+  padding: 20px;  
+  max-width: 80%; /* Adjust max width */  
+}  
+
+.scroll-item {  
+  flex: 0 0 auto;  
+  width: 300px;  
+  text-align: center;  
+  scroll-snap-align: start;  
+}  
+
+.scroll-item img {  
+  width: 100%;  
+  border-radius: 8px;  
+}  
+
+.scroll-item p {  
+  margin-top: 10px;  
+  font-size: 18px;  
+  font-weight: bold;  
+}  
+
+/* Optional: Custom Scrollbars */  
+.image-scroll::-webkit-scrollbar {  
+  height: 8px;  
+}  
+
+.image-scroll::-webkit-scrollbar-thumb {  
+  background-color: #888;  
+  border-radius: 10px;  
+}  
+
+.image-scroll::-webkit-scrollbar-thumb:hover {  
+  background-color: #555;  
+}
